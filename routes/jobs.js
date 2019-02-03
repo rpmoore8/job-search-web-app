@@ -13,7 +13,17 @@ router.get("/test", (req, res) => res.json({ msg: "Jobs Works" }));
 // @rout    GET jobs
 // @desc    get jobs by city / category
 // @access  Public
-router.get("/:city/:category", (req, res) => {});
+router.get("/:city/:category", (req, res) => {
+  Job.find({
+    city: req.params.city,
+    category: req.params.category,
+    keywords: { $exists: true }
+  }).then(jobs => {
+    if (jobs.length > 0) {
+      return res.json(jobs);
+    }
+  });
+});
 
 // @route   Post jobs
 // @desc    Search jobs

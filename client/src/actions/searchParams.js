@@ -51,10 +51,10 @@ export const cities = [
   "Wichita, KS"
 ];
 
-const categoryNames = [
-  "Accounting / Finance/",
-  "Administration/",
-  "Business / Operations / Strategy/",
+export const categoryNames = [
+  "Accounting / Finance",
+  "Administration",
+  "Business / Operations / Strategy",
   "Creative / Design",
   "Customer Service / Retail",
   "Data / Analytics",
@@ -74,23 +74,23 @@ const categoryNames = [
 ];
 
 export const categories = [
-  "creative design",
-  "sales",
-  "legal",
-  "education",
-  "editorial",
-  "business operations strategy",
-  "human resources recruiting",
-  "management",
-  "health wellness fitness",
-  "data analytics",
-  "healthcare medicine",
-  "administration",
-  "marketing pr media",
-  "information technology software",
-  "engineering",
   "accounting finance",
-  "insurance claims",
+  "administration",
+  "business operations strategy",
+  "creative design",
   "customer service retail",
-  "fundraising development"
+  "data analytics",
+  "editorial",
+  "education",
+  "engineering",
+  "fundraising development",
+  "health wellness fitness",
+  "healthcare medicine",
+  "human resources recruiting",
+  "information technology software",
+  "insurance claims",
+  "legal",
+  "management",
+  "marketing pr media",
+  "sales"
 ];

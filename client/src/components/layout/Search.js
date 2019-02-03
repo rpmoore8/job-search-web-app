@@ -56,7 +56,7 @@ class Search extends Component {
       search = this.state.searchWords + profile.skills.join(" ");
     } else {
       search = this.state.searchWords;
-      console.log(this.state.city);
+      console.log(this.state.city + " - " + this.state.category);
     }
 
     const searchData = {
@@ -210,14 +210,14 @@ class Search extends Component {
                   <option>Accounting / Finance</option>
                   <option>Administration</option>
                   <option>Business / Operations / Strategy</option>
-                  <option>Creative / Design'</option>
+                  <option>Creative / Design</option>
                   <option>Customer Service / Retail</option>
                   <option>Data / Analytics</option>
                   <option>Editorial</option>
                   <option>Education</option>
                   <option>Engineering</option>
                   <option>Fundraising / Development</option>
-                  <option>Health / Wellness / Fitness'</option>
+                  <option>Health / Wellness / Fitness</option>
                   <option>Healthcare / Medicine</option>
                   <option>Human Resources / Recruiting</option>
                   <option>Information Technology / Software</option>

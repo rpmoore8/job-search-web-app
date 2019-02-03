@@ -12,11 +12,11 @@ class JobItem extends Component {
     };
   }
 
-  // componentDidMount() {
-  //   if (this.props.auth.isAuthenticated) {
-  //     this.props.getCurrentProfile();
-  //   }
-  // }
+  componentDidMount() {
+    if (this.props.auth.isAuthenticated) {
+      this.props.getCurrentProfile();
+    }
+  }
 
   saveJob = () => {
     const id = this.props.job.id;
@@ -71,30 +71,30 @@ class JobItem extends Component {
       }
     }
 
-    let displayedSents = null;
-    if (job.matchedSents) {
-      displayedSents = job.matchedSents.map((sent, index) => (
-        <li key={index} className="list-group-item">
-          {sent}
-        </li>
-      ));
-    }
+    // let displayedSents = null;
+    // if (job.matchedSents) {
+    //   displayedSents = job.matchedSents.map((sent, index) => (
+    //     <li key={index} className="list-group-item">
+    //       {sent}
+    //     </li>
+    //   ));
+    // }
 
-    let hiddenSents = null;
-    if (showExtraSents && job.extraSents) {
-      hiddenSents = job.extraSents.map(sent => (
-        <li className="list-group-item">{sent}</li>
-      ));
-    }
+    // let hiddenSents = null;
+    // if (showExtraSents && job.extraSents) {
+    //   hiddenSents = job.extraSents.map(sent => (
+    //     <li className="list-group-item">{sent}</li>
+    //   ));
+    // }
 
-    let searchWords = job.sortedWords.map((word, index) => {
-      let match = (
-        <li key={index}>
-          {word[0]} - {Math.round(word[1] * 100)}%
-        </li>
-      );
-      return match;
-    });
+    // let searchWords = job.sortedWords.map((word, index) => {
+    //   let match = (
+    //     <li key={index}>
+    //       {word[0]} - {Math.round(word[1] * 100)}%
+    //     </li>
+    //   );
+    //   return match;
+    // });
 
     return (
       <div className="card bg-light mb-3">
@@ -104,11 +104,11 @@ class JobItem extends Component {
           <h4 className="card-subtitle text-muted">
             {job.company.toUpperCase()}
           </h4>
-          <h6 className="card-text text-muted">{searchWords}</h6>
+          {/* <h6 className="card-text text-muted">{searchWords}</h6> */}
           <a href={job.link}>View job at {job.source}</a>
-          <ul className="list-group">{displayedSents}</ul>
-          <ul className="list-group">{hiddenSents}</ul>
-          {showExtraSents ? null : (
+          {/* <ul className="list-group">{displayedSents}</ul> */}
+          {/* <ul className="list-group">{hiddenSents}</ul> */}
+          {/* {showExtraSents ? null : (
             <button
               type="button"
               className="btn btn-info btn-sm"
@@ -117,7 +117,7 @@ class JobItem extends Component {
             >
               Display More
             </button>
-          )}
+          )} */}
         </div>
       </div>
     );
